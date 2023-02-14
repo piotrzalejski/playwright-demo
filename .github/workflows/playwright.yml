@@ -45,8 +45,8 @@ jobs:
         with:
           ref: gh-pages
       - name: Set Git User
-        run: |
         # see: https://github.com/actions/checkout/blob/main/README.md#push-a-commit-using-the-built-in-token
+        run: |
           git config user.name github-actions
           git config user,email github-actions@github.com
       - name: Download artifacts
