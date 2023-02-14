@@ -37,7 +37,7 @@ jobs:
     env: 
       name: github-pages
       HTML_REPORT_URL_PATH: reports/${{ github.ref_name }}
-      
+
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
       pages: write      # to deploy to Pages
@@ -55,6 +55,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
       - name: Download artifacts
+        id: download
         uses: actions/download-artifact@v2
         with:
           name: playwright-report
@@ -62,6 +63,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+        with:
+          publish_dir: ${{ steps.download.outputs.download-path }}
       # - name: Push to GH Pages
       #   timeout-minutes: 3
       #   run: |
