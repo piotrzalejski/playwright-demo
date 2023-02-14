@@ -2,6 +2,10 @@
 
  An example repository showing some of the features of Playwright
 
+ ## Test Resluts:
+ When the below tests are finished, results are published to:
+ https://piotrzalejski.github.io/playwright-demo/reports/main/
+
 ## Login Tests
 
 | Test Case | Automated? | Pass/ Fail |
