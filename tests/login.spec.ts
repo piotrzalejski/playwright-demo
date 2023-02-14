@@ -1,6 +1,6 @@
 import { test, expect } from '../fixtures/loginfixture';
 
-test.describe.only('Login Page Tests', () => {
+test.describe('Login Page Tests', () => {
     const STANDARD_USER = 'standard_user';
     const LOCKED_OUT_USER = 'locked_out_user';
     const PROBLEM_USER = 'problem_user';
