@@ -46,8 +46,9 @@ jobs:
           ref: gh-pages
       - name: Set Git User
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user,email "github-actions[bot]@users.noreply.github.com"
+        # see: https://github.com/actions/checkout/blob/main/README.md#push-a-commit-using-the-built-in-token
+          git config user.name github-actions
+          git config user,email github-actions@github.com
       - name: Download artifacts
         uses: actions/download-artifact@v2
         with:
