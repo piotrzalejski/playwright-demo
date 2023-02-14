@@ -64,7 +64,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v1
         with:
-          publish_dir: ${{ steps.download.outputs.download-path }}
+          artifact_name: ${{ steps.download.outputs.download-name }}
       # - name: Push to GH Pages
       #   timeout-minutes: 3
       #   run: |
