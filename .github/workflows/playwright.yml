@@ -47,12 +47,12 @@ jobs:
         # see: https://github.com/actions/checkout/blob/main/README.md#push-a-commit-using-the-built-in-token
         run: |
           git config user.name github-actions
-          git config user,email github-actions@github.com
+          git config user.email github-actions@github.com
       - name: Download artifacts
         uses: actions/download-artifact@v2
         with:
           name: playwright-report
-          path: {{ env.HTML_REPORT_URL_PATH}}
+          path: {{ env.HTML_REPORT_URL_PATH }}
       - name: Push to GH Pages
         timeout-minutes: 3
         run: |
