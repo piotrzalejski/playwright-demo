@@ -33,6 +33,7 @@ jobs:
     name: Publish Test Results
     if: success() || needs.test.result == 'failure'
     needs: [test]
+    runs-on: ubuntu-latest
     env: 
       name: github-pages
       HTML_REPORT_URL_PATH: reports/${{ github.ref_name }}
