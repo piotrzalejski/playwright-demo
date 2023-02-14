@@ -1,4 +1,4 @@
-import { test, expect } from '@fixtures/loginfixture';
+import { test, expect } from 'fixtures/loginfixture';
 
 test.describe.only('Login Page Tests', () => {
     const STANDARD_USER = 'standard_user';

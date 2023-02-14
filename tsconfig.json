@@ -5,8 +5,8 @@
       "lib": ["esnext", "dom", "DOM.Iterable"],
       "baseUrl": ".",
       "paths": {
-        // "@pages/*" : ["@pages/*"],
-        // "@fixtures/*" : ["./fixtures/*"]
+        "pages/*" : ["./pages/*"],
+        "fixtures/*" : ["./fixtures/*"]
       },
     }
   }
