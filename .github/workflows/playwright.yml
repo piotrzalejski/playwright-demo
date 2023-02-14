@@ -67,7 +67,7 @@ jobs:
         uses: actions/deploy-pages@v1
         with: 
           name: playwright-report
-          path: ${{ env.HTML_REPORT_URL_PATH }}
+          path: playwright-report/
 
       # - name: Push to GH Pages
       #   timeout-minutes: 3
