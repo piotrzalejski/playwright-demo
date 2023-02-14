@@ -35,7 +35,7 @@ jobs:
     needs: [test]
     env: 
       name: github-pages
-      HTML_REPORT_URL_PATH: reports/${{ steps.deployment.outputs.page_url }}
+      HTML_REPORT_URL_PATH: reports/${{ github.ref_name }}
     steps:
       - name: Checkout gh-pages branch
         uses: actions/checkout@v2
