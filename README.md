@@ -1,5 +1,9 @@
-# Playwright Demo
+<div align="center">
 
+# Playwright Demo
+![Tests](https://github.com/piotrzalejski/playwright-demo/actions/workflows/playwright.yml/badge.svg?event=push)
+
+</div>
  An example repository showing some of the features of Playwright
 
  ## Test Resluts:
@@ -8,7 +12,6 @@
  [Test Results](https://piotrzalejski.github.io/playwright-demo/)
 
 
- ![Tests](https://github.com/piotrzalejski/playwright-demo/actions/workflows/playwright.yml/badge.svg)
 
 ## Login Tests
 
