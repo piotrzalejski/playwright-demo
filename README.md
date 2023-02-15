@@ -4,20 +4,24 @@
 
  ## Test Resluts:
  When the below tests are finished, results are published to:
- https://piotrzalejski.github.io/playwright-demo/reports/main/
+
+ [Test Results](https://piotrzalejski.github.io/playwright-demo/)
+
+
+ ![Tests](https://github.com/piotrzalejski/playwright-demo/actions/workflows/playwright.yml/badge.svg)
 
 ## Login Tests
 
 | Test Case | Automated? | Pass/ Fail |
 |:------------|:--------------------:|:---:|
-| Verify Page Content |x|x|
-| Empty Username & Password |x|x|
-| Empty Username |x|x|
-| Empty Password |x|x|
-| Bad Username & Password |x|x|
-| Bad Username |x|x|
-| Bad Password |x|x|
-| Valid Login |x|x|
+| Verify Page Content |✅|✅|
+| Empty Username & Password |✅|✅|
+| Empty Username |✅|✅|
+| Empty Password |✅|✅|
+| Bad Username & Password |✅|✅|
+| Bad Username |✅|✅|
+| Bad Password |✅|✅|
+| Valid Login |✅|✅|
   
 ## Product Page
 

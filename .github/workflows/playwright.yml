@@ -12,15 +12,19 @@ jobs:
     container: mcr.microsoft.com/playwright:v1.30.0-focal
     steps:
       - uses: actions/checkout@v3
+
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+
       - name: Install dependencies
-        run: npm ci
-      - name: Install Playwright
-        run: npx playwright install
+        run: |
+          npm ci
+          npx playwright install
+
       - name: Run Playwright tests
         run: npx playwright test
+
       - name: Upload HTML report as artifact. To troubleshoot failures, extract .zip and double-click index.html
         uses: actions/upload-artifact@v3
         if: always()
@@ -45,8 +49,9 @@ jobs:
         if: always()
         uses: peaceiris/actions-gh-pages@v3
         with:
+        # publsih_branch default gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }} 
           publish_dir: ./playwright-report
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
-              
+          commit_message: ${{ github.event.head_commit.message }}
