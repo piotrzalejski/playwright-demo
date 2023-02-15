@@ -1,11 +1,12 @@
 <div align="center">
 
 # Playwright Demo
+ An example repository showing some of the features of Playwright
+ 
 ![Tests](https://github.com/piotrzalejski/playwright-demo/actions/workflows/playwright.yml/badge.svg?event=push&branch=main)
 [![GitHub last commit](https://img.shields.io/github/last-commit/piotrzalejski/playwright-demo/gh-pages)](https://GitHub.com/piotrzalejski/playwright-demo/commit/gh-pages)
 
 </div>
- An example repository showing some of the features of Playwright
 
  ## Test Resluts:
  When the below tests are finished, results are published to:
