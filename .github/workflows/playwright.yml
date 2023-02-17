@@ -40,12 +40,12 @@ jobs:
       - name: Job Successful
         if: success()
         run: |
-          echo "::notice title= The Job has succeeded::"
+          echo "::notice::The Job has succeeded"
 
       - name: Job Failed
         if: failure()
         run: |
-          echo "::notice title= Tests have Failed::"
+          echo "::notice:Tests have Failed"
           echo "To troubleshoot failures, extract .zip and double-click index.html"
 
   # publsihTestResults:
