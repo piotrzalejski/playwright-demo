@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - "*"
-    branches-igore:
+    branches-ignore:
       - [gh-pages]
   pull_request:
     branches: 
