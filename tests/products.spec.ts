@@ -14,7 +14,7 @@ test.describe('Products Page Tests @products', () => {
         expect(NUMBEROFPRODUCTS).toEqual(6);
     });
 
-    test.only('Should validate product information displayed in a tile ', async ({_products}) => {
+    test('Should validate product information displayed in a tile ', async ({_products}) => {
         const [NAME, PRICE, DESC] = await _products.getProductInfo("4");
         
         expect(NAME).toBe("Sauce Labs Backpack");
