@@ -37,6 +37,14 @@ jobs:
           path: playwright-report/
           retention-days: 30
 
+      - name: Test Results
+        if: test.result = 'success'
+        run: |
+          echo "::notice title= Tests have Passed"
+        if: test.result == 'failure'
+        run: |
+          echo "::notice title= Tests have Failed"
+
   # publsihTestResults:
   #   name: Publish Test Results to GH Pages
   #   needs: [test]
