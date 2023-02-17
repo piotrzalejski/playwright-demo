@@ -4,10 +4,11 @@ on:
     branches:
       - "**"
     branches-ignore:
-      - [gh-pages]
+      - gh-pages
   pull_request:
     branches: 
-      - [main, master]
+      - main
+      - master
 jobs:
   test:
     name : Playwright Tests
