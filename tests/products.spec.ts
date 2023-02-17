@@ -1,5 +1,5 @@
 import { test, expect } from '../fixtures/productsfixture';
-import { SORTSELECTION } from '../utilities/constants';
+import { FILTERS } from '../utilities/constants';
 
 test.describe('Products Page Tests @products', () => {
     // Product page takes extremely long to load, increased timout only for the tests in this file
@@ -18,12 +18,12 @@ test.describe('Products Page Tests @products', () => {
 
     // });
 
-    for (const KEY in SORTSELECTION){
-        const NAMEFIRST = SORTSELECTION[KEY].nameItemFirst;
-        const PRICEFIRST = SORTSELECTION[KEY].priceItemFirst;
-        const NAMELAST = SORTSELECTION[KEY].nameItemLast;
-        const PRICELAST = SORTSELECTION[KEY].priceItemLast;
-        const SORT = SORTSELECTION[KEY].sort;
+    for (const KEY in FILTERS){
+        const NAMEFIRST = FILTERS[KEY].nameItemFirst;
+        const PRICEFIRST = FILTERS[KEY].priceItemFirst;
+        const NAMELAST = FILTERS[KEY].nameItemLast;
+        const PRICELAST = FILTERS[KEY].priceItemLast;
+        const SORT = FILTERS[KEY].sort;
         test(`Should verify sorting: ${SORT}`, async ({_products}) => {
             await _products.sortProducts(SORT);
 

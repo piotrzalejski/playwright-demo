@@ -1,4 +1,4 @@
-export const SORTSELECTION = {
+export const FILTERS = {
     filter1 : {
         sort : 'Name (A to Z)',
         nameItemFirst: "Sauce Labs Backpack",
