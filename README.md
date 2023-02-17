@@ -32,14 +32,14 @@
 
 | Test Case | Automated? | Pass/ Fail |
 |:------------|:--------------------:|:---:|
-| Verify number of products > 0 |x|x|
-| Validate product: title, desc, price, ATC |x|x|
-| Sort A-Z |x|x|
-| Sort Z-A |x|x|
-| Price High - Low |x|x|
-| Price Low - high |x|x|
-| Price Low - high |x|x|
-| Product Detail Page: title, desc, price, ATC|x|x|
+| Verify number of products > 0 |✅|✅|
+| Validate product info displayed in a tile: title, desc, price, ATC |✅|✅|
+| Sort A-Z |✅|✅|
+| Sort Z-A |✅|✅|
+| Price High - Low |✅|✅|
+| Price Low - high |✅|✅|
+| Price Low - high |✅|✅|
+| Specific Product Detail Page: title, desc, price, ATC|x|x|
 | Add to Cart |x|x|
 | Remove from Cart |x|x|
 

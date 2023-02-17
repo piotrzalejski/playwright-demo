@@ -14,9 +14,13 @@ test.describe('Products Page Tests @products', () => {
         expect(NUMBEROFPRODUCTS).toEqual(6);
     });
 
-    // test('Should validate product: title, desc, price, ATC', async ({_products}) => {
-
-    // });
+    test.only('Should validate product information displayed in a tile ', async ({_products}) => {
+        const [NAME, PRICE, DESC] = await _products.getProductInfo("4");
+        
+        expect(NAME).toBe("Sauce Labs Backpack");
+        expect(PRICE).toBe("$29.99");
+        expect(DESC).toContain("streamlined Sly Pack");
+    });
 
     for (const KEY in FILTERS){
         const NAMEFIRST = FILTERS[KEY].nameItemFirst;
@@ -44,19 +48,6 @@ test.describe('Products Page Tests @products', () => {
         });
     
     }
-
-    // test('Should verify sort Z - A', async ({_products}) => {
-
-
-    // });
-
-    // test('Should verify sort High - Low', async ({_products}) => {
-
-    // });
-
-    // test('Should verify sort Low - High ', async ({_products}) => {
-
-    // });
 
     // test('Should Verify product detail page', async ({_products}) => {
 

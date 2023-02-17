@@ -51,4 +51,17 @@ export class ProductPage{
     public async getLastProduct(productInfo: string) : Promise<string> {
         return this.page.locator(`.inventory_item_${productInfo}`).last().innerText();
     }
+
+    /**
+     * should get any product's name, description and price
+     * @param {string} itemIndex
+     * @return {Promise<string[]>}
+     */
+    public async getProductInfo(itemIndex: string) : Promise<string[]>{
+        const NAME =  await this.page.locator(`#item_${itemIndex}_title_link .inventory_item_name`).innerText();
+        const PRICE = await this.page.locator(`.inventory_item_description .inventory_item_price:below(#item_${itemIndex}_title_link)`).first().innerText();
+        const DESC = await this.page.locator(`.inventory_item_description .inventory_item_desc:below(#item_${itemIndex}_title_link)`).first().innerText();
+
+        return [NAME, PRICE, DESC];
+    }
 }
