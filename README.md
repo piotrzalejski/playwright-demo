@@ -4,6 +4,10 @@
  An example repository showing some of the features of Playwright
  
 ![Tests](https://github.com/piotrzalejski/playwright-demo/actions/workflows/playwright.yml/badge.svg?event=push&branch=main)
+
+gh-pages:
+
+
 [![GitHub last commit](https://img.shields.io/github/last-commit/piotrzalejski/playwright-demo/gh-pages)](https://GitHub.com/piotrzalejski/playwright-demo/commit/gh-pages)
 
 </div>
@@ -32,16 +36,16 @@
 
 | Test Case | Automated? | Pass/ Fail |
 |:------------|:--------------------:|:---:|
-| Verify number of products > 0 |x|x|
-| Validate product: title, desc, price, ATC |x|x|
-| Sort A-Z |x|x|
-| Sort Z-A |x|x|
-| Price High - Low |x|x|
-| Price Low - high |x|x|
-| Price Low - high |x|x|
-| Product Detail Page: title, desc, price, ATC|x|x|
-| Add to Cart |x|x|
-| Remove from Cart |x|x|
+| Verify number of products > 0 |✅|✅|
+| Validate product info displayed in a tile: title, desc, price, ATC |✅|✅|
+| Sort A-Z |✅|✅|
+| Sort Z-A |✅|✅|
+| Price High - Low |✅|✅|
+| Price Low - high |✅|✅|
+| Price Low - high |✅|✅|
+| Specific Product Detail Page: title, desc, price, ATC|✅|✅|
+| Add to Cart |✅|✅|
+| Remove from Cart |✅|✅|
 
 ## Hamburger Menu
 
