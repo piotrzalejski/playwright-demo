@@ -49,9 +49,16 @@ test.describe('Products Page Tests @products', () => {
     
     }
 
-    // test('Should Verify product detail page', async ({_products}) => {
+    test('Should Verify product detail page', async ({_products}) => {
+        const SELECTEDPRODUCT = await _products.selectProduct("4");
+        expect(SELECTEDPRODUCT).toBe(true);
 
-    // });
+        const [ NAME, PRICE, DESC] = await _products.getSelectedProductInfo();
+
+        expect(NAME).toBe("Sauce Labs Backpack");
+        expect(PRICE).toBe("$29.99");
+        expect(DESC).toContain("streamlined Sly Pack")
+    });
 
     // test('Should Verify add to cart', async ({_products}) => {
 
