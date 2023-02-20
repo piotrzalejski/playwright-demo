@@ -2,6 +2,7 @@ name: "[Test] Publish Test Results"
 on:
   pull_request:
     branches: 
+      - main
       - master
     types:
       - closed
