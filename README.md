@@ -43,9 +43,9 @@ gh-pages:
 | Price High - Low |✅|✅|
 | Price Low - high |✅|✅|
 | Price Low - high |✅|✅|
-| Specific Product Detail Page: title, desc, price, ATC|x|x|
-| Add to Cart |x|x|
-| Remove from Cart |x|x|
+| Specific Product Detail Page: title, desc, price, ATC|✅|✅|
+| Add to Cart |✅|✅|
+| Remove from Cart |✅|✅|
 
 ## Hamburger Menu
 

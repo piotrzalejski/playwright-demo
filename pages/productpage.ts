@@ -87,4 +87,31 @@ export class ProductPage{
 
         return [NAME, PRICE, DESC];
     }
+
+    /**
+     * shoud add item to cart
+     * @param {string} product
+     * @return {Promise<void>}
+     */
+    public async addToCart(product: string) : Promise<void> {
+        await this.page.click(`#add-to-cart-${product}`)
+    }
+
+    /**
+     * shoud remove item from cart
+     * @param {string} product
+     * @return {Promise<void>}
+     */
+    public async removeFromCart(product: string) : Promise<void> {
+        await this.page.click(`#remove-${product}`)
+    }
+
+    /**
+     * get number of items in cart
+     * @return {Promise<number>}
+     */
+    public async cartItems() : Promise<number> {
+        const BADGE = await this.page.locator('.shopping_cart_badge').isVisible();
+        return BADGE ? parseInt(await this.page.locator('.shopping_cart_badge').innerHTML()) : 0;
+    }
 }

@@ -46,7 +46,6 @@ test.describe('Products Page Tests @products', () => {
             expect(LASTITEM.price).toBe(PRICELAST);
     
         });
-    
     }
 
     test('Should Verify product detail page', async ({_products}) => {
@@ -60,12 +59,35 @@ test.describe('Products Page Tests @products', () => {
         expect(DESC).toContain("streamlined Sly Pack")
     });
 
-    // test('Should Verify add to cart', async ({_products}) => {
+    test('Should Verify addding and removing from cart', async ({_products}) => {
+        await _products.addToCart('sauce-labs-backpack');
+        let numberOfItems = await _products.cartItems();
+        expect(numberOfItems).toBe(1);
 
-    // });
+        await _products.addToCart('sauce-labs-bolt-t-shirt');
+        numberOfItems = await _products.cartItems();
+        expect(numberOfItems).toBe(2);
 
-    // test('Should Verify remove from cart', async ({_products}) => {
+        await _products.removeFromCart('sauce-labs-backpack');
+        numberOfItems = await _products.cartItems();
+        expect(numberOfItems).toBe(1);
 
-    // });
+        await _products.removeFromCart('sauce-labs-bolt-t-shirt');
+        numberOfItems = await _products.cartItems();
+        expect(numberOfItems).toBe(0);
+    });
 
+    test('Should Verify addding and removing from cart on product detail page', async ({_products}) => {
+        const SELECTEDPRODUCT = await _products.selectProduct("4");
+        expect(SELECTEDPRODUCT).toBe(true);
+
+        await _products.addToCart('sauce-labs-backpack');
+        let numberOfItems = await _products.cartItems();
+        expect(numberOfItems).toBe(1);
+
+        await _products.removeFromCart('sauce-labs-backpack');
+        numberOfItems = await _products.cartItems();
+        expect(numberOfItems).toBe(0);
+    });
+    
 })
