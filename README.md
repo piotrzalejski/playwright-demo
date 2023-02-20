@@ -1,6 +1,6 @@
 <div align="center">
 
-# Playwright Demo Test
+# Playwright Demo
  An example repository showing some of the features of Playwright
  
 ![Tests](https://github.com/piotrzalejski/playwright-demo/actions/workflows/playwright.yml/badge.svg?event=push&branch=main)
