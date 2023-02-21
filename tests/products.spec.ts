@@ -1,4 +1,4 @@
-import { test, expect } from '../fixtures/productsfixture';
+import { test, expect } from '../fixtures/pagefixtures';
 import { FILTERS } from '../utilities/constants';
 
 test.describe('Products Page Tests @products', () => {
