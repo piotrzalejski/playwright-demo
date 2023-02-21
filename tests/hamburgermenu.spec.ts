@@ -47,5 +47,4 @@ test.describe('Hambuerger Menu Tests', () => {
         const URL = await _menu.clickMenuItem('Logout');
         expect(URL).toBe(BASEURL);
     })
-
 })
