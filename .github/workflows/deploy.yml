@@ -1,4 +1,4 @@
-name: "[Test] Publish Test Results"
+name: "Publish Test Results"
 on:
   pull_request:
     branches: 
