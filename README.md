@@ -51,11 +51,11 @@ gh-pages:
 
 | Test Case | Automated? | Pass/ Fail |
 |:------------|:--------------------:|:---:|
-| Verify all items present |x|x|
-| Navigate to All Items |x|x|
-| Navigate to About |x|x|
-| Navigate to Logout |x|x|
-| Navigate to Reset App State |x|x|
+| Verify all items present |✅|✅|
+| Navigate to All Items |✅|✅|
+| Navigate to About |✅|✅|
+| Navigate to Logout |✅|✅|
+| Navigate to Reset App State |skipped|skipped|
 
 ## Cart
 
