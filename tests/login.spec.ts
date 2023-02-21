@@ -1,11 +1,8 @@
-import { test, expect } from '../fixtures/loginfixture';
+import { test, expect } from '../fixtures/pagefixtures';
 
 test.describe('Login Page Tests', () => {
     test.use({ storageState: undefined });
     const STANDARD_USER = 'standard_user';
-    const LOCKED_OUT_USER = 'locked_out_user';
-    const PROBLEM_USER = 'problem_user';
-    const PERFORMANCE_GLITCH_USER = 'performance_glitch_user';
     const PASSWORD = 'secret_sauce';
 
     const USERERRORMSG = 'Epic sadface: Username is required';
