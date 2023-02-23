@@ -1,13 +1,18 @@
 name: "Publish Test Results"
 on:
-  push:
-    branches:
+  pull_request:
+    branches: 
       - main
+      - master
+    types:
+      - closed
   workflow_dispatch:
     # Allows for manual build trigger
 
 jobs:
-  runs-on: ubuntu-latest
+  if_merged:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
 
   steps:
   - name: Download Artifacts
