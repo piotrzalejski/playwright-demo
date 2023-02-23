@@ -61,9 +61,9 @@ gh-pages:
 
 | Test Case | Automated? | Pass/ Fail |
 |:------------|:--------------------:|:---:|
-| Verify Contents: QTY, Desc, Continue Shopping, Checkout |x|x|
-| Add to Cart |x|x|
-| Checkout: no Fname, Lname, Zip|x|x|
-| Checkout: Valid data |x|x|
-| Checkout: Overview Cancel|x|x|
-| Checkout: Overview Finish|x|x|
+| Verify Contents: QTY, Desc, Continue Shopping, Checkout, Cancel, Etc. |✅|✅|
+| Add to Cart |✅|✅|
+| Checkout: no Fname, Lname, Zip|✅|✅|
+| Checkout: Valid data |✅|✅|
+| Checkout: Overview Cancel|✅|✅|
+| Checkout: Overview Finish|✅|✅|

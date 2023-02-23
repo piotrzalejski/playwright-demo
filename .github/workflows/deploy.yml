@@ -1,11 +1,13 @@
 name: "Publish Test Results"
 on:
-  pull_request:
-    branches: 
-      - main
-      - master
-    types:
-      - closed
+  workflow_dispatch:
+    # Allows for manual build trigger
+  # pull_request:
+  #   branches: 
+  #     - main
+  #     - master
+  #   types:
+  #     - closed
 
 jobs:
   if_merged:
