@@ -2,12 +2,12 @@ name: "Publish Test Results"
 on:
   workflow_dispatch:
     # Allows for manual build trigger
-  # pull_request:
-  #   branches: 
-  #     - main
-  #     - master
-  #   types:
-  #     - closed
+  pull_request:
+    branches: 
+      - main
+      - master
+    types:
+      - closed
 
 jobs:
   if_merged:
@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    needs: Playwright Tests
     - name: Download Artifacts
       uses: dawidd6/action-download-artifact@v2
       with:
