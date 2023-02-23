@@ -19,7 +19,8 @@ jobs:
       uses: dawidd6/action-download-artifact@v2
       with:
         workflow: playwright.yml
-        workflow_conclusion: queued
+        workflow_conclusion: success
+        branch: main
 
     - name: Publish to GH Pages
       if: always()
