@@ -14,21 +14,21 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
-  steps:
-  - name: Download Artifacts
-    uses: dawidd6/action-download-artifact@v2
-    with:
-      workflow: playwright.yml
-      workflow_conclusion: success
-      branch: main
+    steps:
+    - name: Download Artifacts
+      uses: dawidd6/action-download-artifact@v2
+      with:
+        workflow: playwright.yml
+        workflow_conclusion: success
+        branch: main
 
-  - name: Publish to GH Pages
-    if: always()
-    uses: peaceiris/actions-gh-pages@v3
-    with:
-    # publish_branch: default gh-pages
-      github_token: ${{ secrets.GITHUB_TOKEN }} 
-      publish_dir: ./playwright-report
-      user_name: 'github-actions[bot]'
-      user_email: 'github-actions[bot]@users.noreply.github.com'
-      commit_message: ${{ github.event.head_commit.message }}
+    - name: Publish to GH Pages
+      if: always()
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+      # publish_branch: default gh-pages
+        github_token: ${{ secrets.GITHUB_TOKEN }} 
+        publish_dir: ./playwright-report
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+        commit_message: ${{ github.event.head_commit.message }}
