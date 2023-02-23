@@ -4,6 +4,8 @@ on:
     branches:
       - "**"
       - "!gh-pages"
+  workflow_dispatch:
+    # Allows for manual build trigger
 jobs:
   test:
     name : Playwright Tests
