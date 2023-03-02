@@ -1,6 +1,6 @@
 import { test, expect } from '../fixtures/pagefixtures';
 
-test.describe('Hamburger Menu Tests', () => {
+test.describe('Hamburger Menu Tests @menu', () => {
     const BASEURL = "https://www.saucedemo.com/"
 
     test('Should Verify Menu Opens', async ({ _menu }) => {

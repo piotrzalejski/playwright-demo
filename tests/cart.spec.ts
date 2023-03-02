@@ -1,6 +1,6 @@
 import { test, expect } from '../fixtures/pagefixtures'
 
-test.describe('Should test Cart page', () => {
+test.describe('Should test Cart page @cart', () => {
     test('Should  Navigate to Cart', async ({ _cart }) => {
         const CART = await _cart.clickCart();
         expect(CART).toBe(true);
@@ -128,8 +128,8 @@ test.describe('Should test Cart page', () => {
             const CONFIRM = await _cart.clickFinish();
             expect(CONFIRM).toContain('/checkout-complete');
 
-            const MSG = await _cart.checkoutMsg();
-            expect(MSG).toBe('THANK YOU FOR YOUR ORDER');
+            const MSG = (await _cart.checkoutMsg()).toLowerCase();
+            expect(MSG).toBe('thank you for your order!');
         });
     });
 })

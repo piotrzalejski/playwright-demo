@@ -1,6 +1,6 @@
 import { test, expect } from '../fixtures/pagefixtures';
 
-test.describe('Login Page Tests', () => {
+test.describe('Login Page Tests @login', () => {
     test.use({ storageState: undefined });
     const STANDARD_USER = 'standard_user';
     const PASSWORD = 'secret_sauce';
