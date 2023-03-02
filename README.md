@@ -4,7 +4,7 @@
  An example repository showing some of the features of Playwright.<br><br>
 Tried to make a sample test plan with automation using demo site [saucedemo.com](https://www.saucedemo.com)<br><br>
  
-![Tests](https://github.com/piotrzalejski/playwright-demo/actions/workflows/playwright.yml/badge.svg?event=push&branch=main)
+![Tests](https://github.com/piotrzalejski/playwright-demo/actions/workflows/playwright.yml/badge.svg?branch=main)
 
 gh-pages:
 
